@@ -1,15 +1,18 @@
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import java.util.Scanner;
 
-public class MainTest {
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    @Test
-    void testSum() {
-        assertEquals(5, Main.sum(2, 3));
+        int number = scanner.nextInt();
+        int sum = 0;
+
+        number = Math.abs(number);
+
+        while (number > 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+
+        System.out.println(sum);
     }
-
-    @Test
-    void testNegative() {
-        assertEquals(-1, Main.sum(2, -3));
-    }
-}
