@@ -1,11 +1,18 @@
 import java.util.Scanner;
 
-class MyNumber {
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int sum = a + b;
+        Scanner scanner = new Scanner(System.in);
+
+        int number = scanner.nextInt();
+        int sum = 0;
+
+        number = Math.abs(number);
+
+        while (number > 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+
         System.out.println(sum);
     }
-}
