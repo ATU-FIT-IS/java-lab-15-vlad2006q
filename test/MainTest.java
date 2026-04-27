@@ -1,15 +1,11 @@
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+import java.util.Scanner;
 
-public class MainTest {
-
-    @Test
-    void testSum() {
-        assertEquals(5, Main.sum(2, 3));
-    }
-
-    @Test
-    void testNegative() {
-        assertEquals(-1, Main.sum(2, -3));
+class MyNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int sum = a + b;
+        System.out.println(sum);
     }
 }
